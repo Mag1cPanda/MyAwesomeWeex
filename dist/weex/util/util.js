@@ -62,36 +62,19 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 302);
+/******/ 	return __webpack_require__(__webpack_require__.s = 105);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 302:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _util = __webpack_require__(6);
-
-var _util2 = _interopRequireDefault(_util);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_util2.default.el = '#root';
-new Vue(_util2.default);
-
-/***/ }),
-
-/***/ 6:
+/***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* script */
-__vue_exports__ = __webpack_require__(7)
+__vue_exports__ = __webpack_require__(1)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -119,7 +102,7 @@ module.exports = __vue_exports__
 
 /***/ }),
 
-/***/ 7:
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -128,6 +111,7 @@ module.exports = __vue_exports__
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
 
 var pushUrl = 'http://192.168.6.223:8081/dist/'; //接口请求地址
 var serverUrl = "http://192.168.6.223:86/WEEX/restservices/weexrest";
@@ -140,6 +124,23 @@ exports.default = {
     pushUrl: pushUrl,
     longriseWeexBack: longriseWeexBack
 };
+
+/***/ }),
+
+/***/ 105:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _util = __webpack_require__(0);
+
+var _util2 = _interopRequireDefault(_util);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_util2.default.el = '#root';
+new Vue(_util2.default);
 
 /***/ })
 

@@ -62,18 +62,78 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 287);
+/******/ 	return __webpack_require__(__webpack_require__.s = 90);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 287:
+/***/ 0:
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* script */
+__vue_exports__ = __webpack_require__(1)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/longrise/Desktop/awesome-project/src/weex/util/util.vue"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _login = __webpack_require__(288);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+
+var pushUrl = 'http://192.168.6.223:8081/dist/'; //接口请求地址
+var serverUrl = "http://192.168.6.223:86/WEEX/restservices/weexrest";
+var imageUrl = 'http://192.168.1.123:8081/images/'; //图片地址
+var longriseWeexBack = 'longriseWeexBack';
+
+exports.default = {
+    serverUrl: serverUrl,
+    imageUrl: imageUrl,
+    pushUrl: pushUrl,
+    longriseWeexBack: longriseWeexBack
+};
+
+/***/ }),
+
+/***/ 90:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _login = __webpack_require__(91);
 
 var _login2 = _interopRequireDefault(_login);
 
@@ -84,21 +144,21 @@ new Vue(_login2.default);
 
 /***/ }),
 
-/***/ 288:
+/***/ 91:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(289)
+__vue_styles__.push(__webpack_require__(92)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(290)
+__vue_exports__ = __webpack_require__(93)
 
 /* template */
-var __vue_template__ = __webpack_require__(291)
+var __vue_template__ = __webpack_require__(94)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -129,14 +189,14 @@ module.exports = __vue_exports__
 
 /***/ }),
 
-/***/ 289:
+/***/ 92:
 /***/ (function(module, exports) {
 
 module.exports = {}
 
 /***/ }),
 
-/***/ 290:
+/***/ 93:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -146,13 +206,14 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _util = __webpack_require__(6);
+var _util = __webpack_require__(0);
 
 var _util2 = _interopRequireDefault(_util);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var modal = weex.requireModule('modal'); //
+//
 //
 //
 //
@@ -255,7 +316,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 291:
+/***/ 94:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -442,65 +503,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("注册")])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
-
-/***/ }),
-
-/***/ 6:
-/***/ (function(module, exports, __webpack_require__) {
-
-var __vue_exports__, __vue_options__
-var __vue_styles__ = []
-
-/* script */
-__vue_exports__ = __webpack_require__(7)
-__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-if (
-  typeof __vue_exports__.default === "object" ||
-  typeof __vue_exports__.default === "function"
-) {
-if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-__vue_options__ = __vue_exports__ = __vue_exports__.default
-}
-if (typeof __vue_options__ === "function") {
-  __vue_options__ = __vue_options__.options
-}
-__vue_options__.__file = "/Users/longrise/Desktop/awesome-project/src/weex/util/util.vue"
-__vue_options__.style = __vue_options__.style || {}
-__vue_styles__.forEach(function (module) {
-  for (var name in module) {
-    __vue_options__.style[name] = module[name]
-  }
-})
-if (typeof __register_static_styles__ === "function") {
-  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-}
-
-module.exports = __vue_exports__
-
-
-/***/ }),
-
-/***/ 7:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var pushUrl = 'http://192.168.6.223:8081/dist/'; //接口请求地址
-var serverUrl = "http://192.168.6.223:86/WEEX/restservices/weexrest";
-var imageUrl = 'http://192.168.1.123:8081/images/'; //图片地址
-var longriseWeexBack = 'longriseWeexBack';
-
-exports.default = {
-    serverUrl: serverUrl,
-    imageUrl: imageUrl,
-    pushUrl: pushUrl,
-    longriseWeexBack: longriseWeexBack
-};
 
 /***/ })
 

@@ -1,5 +1,9 @@
+/* eslint-disable */
 <template>
     <div>
+        <div style="background-color: #00B4FF; width: 750px; height: 88px; align-items: center; flex-direction: row">
+            <image style="background-color: bisque; margin-left: 20px; width: 40px; height: 40px" @click="onBackClick"></image>
+        </div>
         <scroller class="form">
             <text class="titleLab">转正申请表</text>
 
@@ -176,8 +180,10 @@
 <script>
     const modal = weex.requireModule('modal')
     const picker = weex.requireModule('picker')
+    const navigator = weex.requireModule('navigator')
     const typeItems = ['任命考核期转正', '试用期转正']
     const degreeItems = ['中专', '高中', '大专', '本科', '硕士', '博士', '博士后']
+
 
     export default {
         data () {
@@ -208,6 +214,25 @@
         },
 
         methods: {
+            onBackClick () {
+                // navigator.push({
+                //     url: '"http://192.168.1.100:8081/dist/components/GridList.js',
+                //     animated: "true"
+                // }, event => {
+                //     modal.toast({ message: 'callback: ' + event })
+                // })
+
+                navigator.pop({
+                        animated: "true",
+                        data:{
+                            username:'程三',
+                            password:123456
+                        }
+                    }, event => {
+                });
+
+            },
+
             selectTime () {
                 picker.pickDate({
                     value: this.timeValue,
@@ -401,7 +426,6 @@
         margin-left: 20px;
         margin-right: 20px;
         padding-top: 20px;
-        /*padding-bottom: 20px;*/
         padding-left: 20px;
         padding-right: 20px;
         color: #666666;

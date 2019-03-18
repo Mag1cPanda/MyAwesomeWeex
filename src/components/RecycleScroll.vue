@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
   <div>
     <slider class="slider" interval="4500" @change="onchange">

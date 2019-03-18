@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
     <div style="flex-direction: column;background-color: #4E7FFF">
         <div style="flex-direction: row; height: 100px;margin-top: 50px;align-items: center">

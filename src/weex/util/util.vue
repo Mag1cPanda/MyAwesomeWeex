@@ -1,3 +1,4 @@
+/* eslint-disable */
 <script>
     const pushUrl='http://192.168.6.223:8081/dist/';//接口请求地址
     const serverUrl="http://192.168.6.223:86/WEEX/restservices/weexrest";

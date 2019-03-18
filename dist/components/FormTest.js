@@ -62,18 +62,25 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 246);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 246:
+/******/ ([
+/* 0 */,
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _FormTest = __webpack_require__(247);
+var _FormTest = __webpack_require__(9);
 
 var _FormTest2 = _interopRequireDefault(_FormTest);
 
@@ -83,22 +90,21 @@ _FormTest2.default.el = '#root';
 new Vue(_FormTest2.default);
 
 /***/ }),
-
-/***/ 247:
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(248)
+__vue_styles__.push(__webpack_require__(10)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(249)
+__vue_exports__ = __webpack_require__(11)
 
 /* template */
-var __vue_template__ = __webpack_require__(250)
+var __vue_template__ = __webpack_require__(12)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -128,8 +134,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-
-/***/ 248:
+/* 10 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -235,8 +240,7 @@ module.exports = {
 }
 
 /***/ }),
-
-/***/ 249:
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -420,9 +424,14 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
 
 var modal = weex.requireModule('modal');
 var picker = weex.requireModule('picker');
+var navigator = weex.requireModule('navigator');
 var typeItems = ['任命考核期转正', '试用期转正'];
 var degreeItems = ['中专', '高中', '大专', '本科', '硕士', '博士', '博士后'];
 
@@ -455,6 +464,22 @@ exports.default = {
     },
 
     methods: {
+        onBackClick: function onBackClick() {
+            // navigator.push({
+            //     url: '"http://192.168.1.100:8081/dist/components/GridList.js',
+            //     animated: "true"
+            // }, event => {
+            //     modal.toast({ message: 'callback: ' + event })
+            // })
+
+            navigator.pop({
+                animated: "true",
+                data: {
+                    username: '程三',
+                    password: 123456
+                }
+            }, function (event) {});
+        },
         selectTime: function selectTime() {
             var _this = this;
 
@@ -546,12 +571,29 @@ exports.default = {
 };
 
 /***/ }),
-
-/***/ 250:
+/* 12 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('scroller', {
+  return _c('div', [_c('div', {
+    staticStyle: {
+      backgroundColor: "#00B4FF",
+      width: "750px",
+      height: "88px",
+      alignItems: "center",
+      flexDirection: "row"
+    }
+  }, [_c('image', {
+    staticStyle: {
+      backgroundColor: "bisque",
+      marginLeft: "20px",
+      width: "40px",
+      height: "40px"
+    },
+    on: {
+      "click": _vm.onBackClick
+    }
+  })]), _c('scroller', {
     staticClass: ["form"]
   }, [_c('text', {
     staticClass: ["titleLab"]
@@ -984,5 +1026,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ })
-
-/******/ });
+/******/ ]);
